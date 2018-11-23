@@ -1,8 +1,8 @@
 var CACHE_NAME = 'gullocean-amp-pwa-cache-v1';
 var urlsToCache = [
-  '/pwa/',
-  '/pwa/styles/main.css',
-  '/pwa/script/main.js'
+  '/',
+  '/styles/main.css',
+  '/script/main.js'
 ];
 
 self.addEventListener('install', function(event) {
