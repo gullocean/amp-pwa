@@ -1,8 +1,8 @@
 var CACHE_NAME = 'gullocean-amp-pwa-cache-v1';
 var urlsToCache = [
-  '/',
-  '/styles/main.css',
-  '/script/main.js'
+  '/pwa/',
+  '/pwa/styles/main.css',
+  '/pwa/script/main.js'
 ];
 
 self.addEventListener('install', function(event) {
@@ -18,7 +18,7 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', event => {
   if (event.request.mode === 'navigate') {
-    event.respondWith(fetch('/pwa'));
+    event.respondWith(fetch('/'));
 
     // Immediately start downloading the actual resource.
     fetch(event.request.url);
