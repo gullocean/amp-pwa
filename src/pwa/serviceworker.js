@@ -1,4 +1,4 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'gullocean-amp-pwa-cache-v1';
 var urlsToCache = [
   '/pwa/',
   '/pwa/styles/main.css',
@@ -14,4 +14,14 @@ self.addEventListener('install', function(event) {
         return cache.addAll(urlsToCache);
       })
   );
+});
+
+self.addEventListener('fetch', event => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith(fetch('/pwa'));
+
+    // Immediately start downloading the actual resource.
+    fetch(event.request.url);
+  }
+
 });
