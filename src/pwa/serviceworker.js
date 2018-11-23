@@ -1,6 +1,6 @@
 var CACHE_NAME = 'gullocean-amp-pwa-cache-v1';
 var urlsToCache = [
-  '/pwa/',
+  '/pwa',
   '/pwa/styles/main.css',
   '/pwa/script/main.js'
 ];
