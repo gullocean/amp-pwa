@@ -8,7 +8,7 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/src/index.html'));
 });
 app.get('/pwa', function(req, res) {
-  res.sendFile(path.join(__dirname, '/src/pwa.html'));
+  res.sendFile(path.join(__dirname, '/src/pwa/index.html'));
 });
 
 // start app
