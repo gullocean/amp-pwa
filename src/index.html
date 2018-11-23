@@ -18,7 +18,9 @@
   <h1>Hello World!</h1>
   <amp-install-serviceworker
     src="https://gullocean-amp-pwa.herokuapp.com/serviceworker.js"
-    layout="nodisplay">
+    layout="nodisplay"
+    data-no-service-worker-fallback-url-match=".*"
+    data-no-service-worker-fallback-shell-url="https://www.your-domain.com/pwa">
   </amp-install-serviceworker>
 </body>
 </html>
