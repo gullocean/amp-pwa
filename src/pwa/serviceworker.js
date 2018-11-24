@@ -18,7 +18,7 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', event => {
   if (event.request.mode === 'navigate') {
-    event.respondWith(fetch('./pwa'));
+    event.respondWith(fetch('/pwa'));
 
     // Immediately start downloading the actual resource.
     fetch(event.request.url);
